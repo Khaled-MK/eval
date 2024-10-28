@@ -24,7 +24,7 @@ if (process.env.Node_Env === "dev") {
    console.log("mode: ", process.env.Node_Env);
 }
 
-console.log("db_url :", process.env.DB_URL);
+console.log("db_url 2 :", process.env.DB_URL);
 
 dbConnect();
 
