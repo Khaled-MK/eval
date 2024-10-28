@@ -1,0 +1,12 @@
+{
+   "name": "x",
+   "version": "1.0.0",
+   "main": "index.js",
+   "scripts": {
+      "minicss": "tailwindcss -o ./css/style.css --minify",
+      "buildcss": "tailwindcss -i ./src/style.css -o ./css/master.css --watch"
+   },
+   "author": "",
+   "license": "ISC",
+   "description": ""
+}

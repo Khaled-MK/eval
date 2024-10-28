@@ -1,0 +1,108 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/master.css" />
+</head>
+
+<body class="bg-emerald-400 pb-0">
+  <header class="w-full h-20 bg-gradient-to-r from-blue-800 to-pink-400 flex justify-center items-center select-none uppercase">
+    <h1 class="text-white text-4xl font-helvetica-bold-oblic">bons points</h1>
+  </header>
+  <div class="mx-auto my-2 w-[98%] max-w-3xl rounded-lg shadow-lg px-2 py-4 font-helv bg-white select-none">
+    <div>
+      <h2 class="text-center font-semibold text-2xl">Ajouter un element</h2>
+    </div>
+    <div class="my-4">
+      <form id="addForm">
+        <div class="">
+          <div id="enfLabel" class="flex">
+            <h3 id="enfH" class="w-6/12 border-b-2 border-slate-600 px-1 font-semibold">Enfant :</h3>
+            <div class="genDiv w-3/12 text-center h-full border-2 border-b-0 border-slate-600 rounded-tl-2xl">
+              <input type="radio" id="omar" name="enfant" class="hidden" checked />
+              <label for="omar" class="w-full cursor-pointer">
+                <div class="gender w-full">Omar</div>
+              </label>
+            </div>
+            <div class="genDiv w-3/12 text-center h-full border-2 border-slate-600 rounded-tr-2xl cursor-pointer">
+              <input type="radio" id="maya" name="enfant" class="hidden" />
+              <label for="maya" class="w-full cursor-pointer">
+                <div class="gender w-full">Maya</div>
+              </label>
+            </div>
+          </div>
+          <div class="mb-10 border-2 border-t-0 border-slate-600 rounded-b-2xl px-2 pt-4 pb-10">
+            <div>
+              <label for="" class="font-semibold">Class :</label>
+              <div class="flex-wrap gap-3 sm:flex">
+                <div class="">
+                  <input type="radio" id="lecture" name="class" />
+                  <label for="lecture">Lecture</label>
+                </div>
+                <div class="">
+                  <input type="radio" id="ecriture" name="class" />
+                  <label for="ecriture">Ecriture</label>
+                </div>
+                <div class="">
+                  <input type="radio" id="hifd" name="class" />
+                  <label for="hifd">Hifd</label>
+                </div>
+                <div class="">
+                  <input type="radio" id="rangement" name="class" />
+                  <label for="rangement">Rangement</label>
+                </div>
+                <div class="">
+                  <input type="radio" id="comportement" name="class" />
+                  <label for="comportement">Comportement</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="my-4 grid grid-cols-6">
+              <div class="col-span-2">
+                <label for="" class="font-semibold">Note :</label>
+              </div>
+              <div class="col-span-4 flex">
+                <div class="w-5/6">
+                  <input type="range" id="noteBar" class="note-range w-full" min="0" max="10" value="0" />
+                </div>
+                <div class="text-center w-1/6">
+                  <span id="noteSpan" class="note-span text-right text-xl text-red-600">0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="my-4 grid grid-cols-6">
+              <div class="col-span-2">
+                <label for="" class="font-semibold">Descreption</label>
+              </div>
+              <div class="col-span-4">
+                <input type="text" name="" id="description" class="mx-auto my-1 px-2 border-2 border-slate-600 rounded-lg" maxlength="35" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="my-4 flex justify-end">
+          <input type="submit" class="px-8 py-1 bg-gradient-to-r from-blue-800 to-pink-400 text-white font-semibold rounded-full select-none cursor-pointer" value="Envoyer" />
+        </div>
+      </form>
+      <div id="errDiv" class="my-4  w-full  flex-col justify-center items-center font-mono hidden">
+        <h3 class="text-red-600 text-xl ">Erreur lors de l'enregistrement de la note</h3>
+        <a href="" class="text-blue-800">Ressayer</a>
+      </div>
+    </div>
+  </div>
+  <footer class="fixed bottom-0 left-0 z-40 h-10 px-6 w-full bg-gradient-to-l from-blue-800 to-pink-400 flex justify-between items-center text-white font-semibold">
+    <a href="#">Retour</a>
+    <a href="#" class="w-8 h-8 pb-1 border-2 border-white rounded-md flex justify-center items-center text-2xl"><span>+</span></a>
+    <a href="#">Compte</a>
+  </footer>
+  <script src="./js/add.js"></script>
+</body>
+
+</html>

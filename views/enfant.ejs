@@ -1,0 +1,89 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/master.css" />
+</head>
+
+<body class="bg-emerald-400 pb-0">
+  <header class="w-full h-20 px-4  flex md:justify-center items-center font-helv select-none">
+    <a href="/">
+      <h1 class="text-white text-xl md:text-4xl font-helvetica-bold-oblic uppercase">pointus</h1>
+    </a>
+    <div class="absolute right-0 h-20 justify-self-end flex flex-col justify-center items-end">
+      <div id=<%=userPrenom%> class="flex justify-center items-center text-right relative">
+        <div class="">
+          <% if (userNom && userPrenom ){ %>
+          <p class="uppercase text-sm"><%=userNom %> <%=userPrenom %></p>
+          <p class="text-[12px]"><%=userRole %></p>
+          <% }else { %>
+          <p class="uppercase text-sm">Connectez-vous</p>
+          <% } %>
+        </div>
+
+        <div class="mx-3 w-12 h-12 bg-gray-500 rounded-full overflow-hidden">
+          <img id="profilePhoto" src=<%=`../imgs/${userPrenom.toLowerCase()}.jpg`  %> alt="" />
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <div class="mx-auto my-2 w-[98%] max-w-3xl rounded-lg shadow-lg py-4 px-2 font-helv bg-white select-none">
+    <div class="flex items-end ">
+      <div class=" w-12 h-12 rounded-full overflow-hidden bg-slate-600 outline outline-2 outline-offset-2 outline-pink-600">
+        <img src=<%=`../imgs/${prenom.toLowerCase()}.jpg`  %> alt="" />
+      </div>
+      <h2 id="enfant" class="mx-2 text-center font-semibold text-2xl capitalize"><%=prenom%><span class="uppercase"> MELLOUKI</span></h2>
+      <!-- <h2 class="mx-1 text-center font-semibold text-2xl uppercase">Mellouki</h2> -->
+    </div>
+    <div class="my-4 w-full flex flex-wrap justify-between items-center ">
+      <div class="w-10/12 h-4 rounded-full relative overflow-hidden">
+        <div class="absolute top-0 left-0  h-4 "></div>
+      </div>
+      <div class="w-2/12 flex justify-center">
+        <img src="" alt="" class="h-7" />
+      </div>
+      <div class="w-5/6 flex justify-center text-sm text-green-600">
+        <p id="moyenneP"><%=moyenne%></p>
+      </div>
+    </div>
+
+    <div class="mx-auto w-full max-w-3xl rounded-lg  order-2 py-4 px-1 text-[13px] select-none">
+      <div class="flex justify-between font-semibold">
+        <p class="w-[32%]">Date/Heure</p>
+        <p class="w-[42%]">Description</p>
+        <p class="w-[14%]">Class</p>
+        <p class="w-[10%]">Note</p>
+      </div>
+      <% for(let i=0; i<notes.length; i++){  %>
+      <div id=<%=notes[i].id %> class="evalDiv my-2  flex justify-between items-center cursor-pointer relative">
+        <p class="creaTime w-[32%] "><%=notes[i].createdAt%></p>
+        <p class="w-[42%]  whitespace-pre text-ellipsis overflow-hidden"><%=notes[i].description%> </p>
+        <p class="w-[14%] "><%=notes[i].classNote%></p>
+        <p class="w-[10%]  font-bold text-right"><%=notes[i].note%></p>
+        <div class="absolute left-0 top-0 w-0 h-6   flex justify-end space-x-3 overflow-hidden  trans-div">
+          <button class="annul font-bold flex items-center cursor-pointer text-lg text-white ">X</button>
+          <button class="modifier px-4  text-white rounded-lg  flex items-center cursor-pointer ">Modifier</button>
+          <button class="supprimer px-4  text-white rounded-lg  flex items-center cursor-pointer ">Supprimer</button>
+        </div>
+      </div>
+      <% } %>
+
+    </div>
+
+  </div>
+  <footer class="wrapper fixed bottom-0 left-0 z-40 h-10 px-6 w-full flex justify-between items-center text-white font-semibold">
+    <a href="/">Retour</a>
+    <a href="/addNote" class="w-8 h-8 pb-1 border-2 border-white rounded-md flex justify-center items-center text-2xl"><span>+</span></a>
+    <a href="/logout">Logout</a>
+  </footer>
+  <script src="../js/commun.js"></script>
+  <script src="../js/enfant.js"></script>
+</body>
+
+</html>

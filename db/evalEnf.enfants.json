@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "6718eaadcad32c4294dbc754"
+  },
+  "prenom": "omar",
+  "dateN": "24-02-2019",
+  "notes": [
+    {
+      "id": 0,
+      "evaluateur": "6715788d59d8cba811ea5ede",
+      "classNote": "rangement",
+      "note": 4,
+      "discreption": "az",
+      "createAt": {
+        "$date": "2024-10-26T19:53:39.601Z"
+      }
+    }
+  ],
+  "moyNote": 4,
+  "updatedAt": {
+    "$date": "2024-10-26T19:53:39.603Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6718eb17cad32c4294dbc755"
+  },
+  "prenom": "maya",
+  "dateN": "03-01-2022",
+  "notes": [],
+  "moyNote": 8,
+  "updatedAt": {
+    "$date": "2024-10-25T14:16:30.069Z"
+  }
+}]

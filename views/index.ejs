@@ -1,0 +1,127 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/master.css" />
+</head>
+
+<body class=" pb-0">
+  <header class="w-full h-20 px-4  flex md:justify-center items-center font-helv select-none">
+    <a href="/">
+      <h1 class="text-white text-xl md:text-4xl font-helvetica-bold-oblic uppercase">pointus</h1>
+    </a>
+    <div class="absolute right-0 h-20 justify-self-end flex flex-col justify-center items-end">
+      <div id=<%=userPrenom%> class="flex justify-center items-center text-right relative">
+        <div class="">
+          <% if (userNom && userPrenom ){ %>
+          <p class="uppercase text-sm"><%=userNom %> <%=userPrenom %></p>
+          <p class="text-[12px]"><%=userRole %></p>
+          <% }else { %>
+          <p class="uppercase text-sm">Connectez-vous</p>
+          <% } %>
+        </div>
+
+        <div class="mx-3 w-12 h-12 bg-gray-500 rounded-full overflow-hidden">
+          <img id="profilePhoto" src=<%=`../imgs/${userPrenom.toLowerCase()}.jpg`  %> alt="" />
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <div class="mx-auto w-full max-w-3xl px-1 py-2 font-helv md:flex select-none">
+    <section id="maya" class="enfant md:w-1/2 px-1 my-2 cursor-pointer">
+      <div class="pt-4 px-2 bg-white rounded-md shadow-lg">
+        <div class="w-full flex items-center space-x-2">
+          <div class="w-12 h-12 rounded-full overflow-hidden bg-slate-600 outline outline-2 outline-offset-2 outline-pink-600">
+            <img src="./imgs/maya.jpg" alt="" />
+          </div>
+          <h2 class="uppercase font-bold text-xl underline underline-offset-8 under decoration-[3px] decoration-pink-600">maya</h2>
+        </div>
+        <div class="my-6">
+          <h3 class="font-semibold">Note actuelle</h3>
+          <div class="moy-div my-2 w-full flex flex-wrap justify-between items-center">
+            <div class="w-10/12 h-4 rounded-full relative overflow-hidden">
+              <div class="absolute top-0 left-0 h-4"></div>
+            </div>
+
+            <div class="w-2/12 flex justify-end">
+              <img src="" alt="" class="h-7" />
+            </div>
+            <div class="w-5/6 flex justify-center text-sm text-green-600">
+              <p id=<%=mayaMoy%>></p>
+            </div>
+          </div>
+        </div>
+        <div class=" flex justify-end">
+          <h3 class="text-[12px] self-end">Mis à jour le <span class="update-span"><%=mayaUpDate %> </span></h3>
+        </div>
+      </div>
+    </section>
+    <section id="omar" class="enfant md:w-1/2 px-1 my-2 cursor-pointer">
+      <div class="pt-4 px-2 bg-white rounded-md shadow-lg">
+        <div class="w-full flex items-center space-x-2">
+          <div class="w-12 h-12 rounded-full overflow-hidden bg-slate-600 outline outline-2 outline-offset-2 outline-sky-600">
+            <img src="./imgs/omar.jpg" alt="" />
+          </div>
+          <h2 class="uppercase font-bold text-xl underline underline-offset-8 under decoration-[3px] decoration-sky-600">omar</h2>
+        </div>
+        <div class="my-6">
+          <h3 class="font-semibold">Note actuelle</h3>
+          <div class="moy-div my-2 w-full flex flex-wrap justify-between items-center">
+            <div class="w-10/12 h-4 rounded-full relative overflow-hidden">
+              <div class="absolute top-0 left-0 h-4"></div>
+            </div>
+
+            <div class="w-2/12 flex justify-end">
+              <img src="" alt="" class="h-7" />
+            </div>
+            <div class="w-5/6 flex justify-center text-sm text-green-600">
+              <p id=<%=omarMoy%>></p>
+            </div>
+          </div>
+        </div>
+        <div class=" flex justify-end">
+          <h3 class="text-[12px] self-end">Mis à jour le <span class="update-span"><%=omarUpDate%></span></h3>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- <div class=" py-4 px-1">
+
+    <div class="mx-auto w-full max-w-3xl rounded-lg bg-white py-4 px-2 shadow-lg text-[13px] select-none">
+      <div class="flex justify-between font-semibold">
+        <p class="w-[32%]">Date/Heure</p>
+        <p class="w-[42%]">Déscription</p>
+        <p class="w-[14%]">Class</p>
+        <p class="w-[10%]">Note</p>
+      </div>
+
+      <div class="my-2 flex justify-between">
+        <p class="w-[32%] cursor-pointer">Sam 10/10 14:32</p>
+        <p class="w-[42%] cursor-pointer whitespace-pre text-ellipsis overflow-hidden">Sourazt el fatihadz qsdz zzqsdzz ss</p>
+        <p class="w-[14%] cursor-pointer">Lecture</p>
+        <p class="w-[10%] cursor-pointer font-bold text-right">8</p>
+      </div>
+      <div class="my-2 flex justify-between">
+        <p class="w-[32%] cursor-pointer">Sam 10/10 14:32</p>
+        <p class="w-[42%] cursor-pointer whitespace-pre text-ellipsis overflow-hidden">Sourazt el fatihadz qsdz zzqsdzz ss</p>
+        <p class="w-[14%] cursor-pointer">Hrissa</p>
+        <p class="w-[10%] cursor-pointer font-bold text-right">8</p>
+      </div>
+    </div>
+  </div> -->
+  <footer class="wrapper fixed bottom-0 left-0 z-40 h-10 px-6 w-full flex justify-between items-center text-white font-semibold">
+    <a href="#"></a>
+    <a href="/addNote" class="w-8 h-8 pb-1 border-2 border-white rounded-md flex justify-center items-center text-2xl"><span>+</span></a>
+    <a href="/logout">Logout</a>
+  </footer>
+  <script src="./js/commun.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

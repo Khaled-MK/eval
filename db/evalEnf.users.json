@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "6715784f4acbfb2132305f39"
+  },
+  "email": "hamel.vb@gmail.com",
+  "nom": "Hammouda",
+  "userName": "Amel",
+  "prenom": "Amel",
+  "role": "Parent",
+  "methode": "Normale",
+  "tel": "0553002550",
+  "mdp": "$2b$13$jfVxf.SqGmoDjomAoDrLq.SDG.YZcMnALuwVk7jo9Ku5lIOB8y.GW",
+  "createdAt": {
+    "$date": "2024-10-20T21:38:23.067Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-20T21:38:23.067Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6715788d59d8cba811ea5ede"
+  },
+  "email": "melloukimedkhaled@gmail.com",
+  "nom": "mellouki",
+  "userName": "Khaled",
+  "prenom": "khaled",
+  "role": "Parent",
+  "methode": "Normale",
+  "tel": "0560988647",
+  "mdp": "$2b$13$R6FcVObiYB9VqBFQ/pnZcOj.MkofGV.ZYj1QZ6e53NSWK4Ve0Gnme",
+  "createdAt": {
+    "$date": "2024-10-20T21:39:25.228Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-20T21:39:25.228Z"
+  },
+  "__v": 0
+}]

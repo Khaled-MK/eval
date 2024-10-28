@@ -1,0 +1,130 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/master.css" />
+</head>
+
+<body class=" pb-0">
+  <header class="w-full h-20 px-4  flex md:justify-center items-center font-helv select-none">
+    <a href="/">
+      <h1 class="text-white text-xl md:text-4xl font-helvetica-bold-oblic uppercase">pointus</h1>
+    </a>
+    <div class="absolute right-0 h-20 justify-self-end flex flex-col justify-center items-end">
+      <div id=<%=userPrenom%> class="flex justify-center items-center text-right relative">
+        <div class="">
+          <% if (userNom && userPrenom ){ %>
+          <p class="uppercase text-sm"><%=userNom %> <%=userPrenom %></p>
+          <p class="text-[12px]"><%=userRole %></p>
+          <% }else { %>
+          <p class="uppercase text-sm">Connectez-vous</p>
+          <% } %>
+        </div>
+
+        <div class="mx-3 w-12 h-12 bg-gray-500 rounded-full overflow-hidden">
+          <img id="profilePhoto" src=<%=`/imgs/${userPrenom.toLowerCase()}.jpg`  %> alt="" />
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <div class="wrapper mx-auto my-2 w-[98%] max-w-3xl rounded-lg shadow-lg px-2 py-4 text-white font-helv border-[1px]  border-white select-none">
+    <div>
+      <h2 class="text-center font-semibold text-2xl uppercase">Modifier une note</h2>
+    </div>
+    <div class="my-4">
+      <form id="addForm">
+        <div class="">
+          <!-- <div id="enfLabel" class="flex">
+            <h3 id=<%=eval.enfant%> class="w-6/12  px-1 font-semibold">Enfant : <%=eval.enfant%> </h3>
+
+          </div> -->
+
+          <div id="enfLabel" class="flex">
+            <h3 id=<%=eval.enfant%> class="w-6/12 border-b-2 border-white px-1 font-semibold">Enfant :</h3>
+            <div class="genDiv w-3/12 text-center h-full border-2 border-b-0 border-white rounded-tl-2xl">
+              <input type="radio" id="omar" name="enfant" class="hidden" checked />
+              <label for="omar" class="w-full cursor-pointer">
+                <div class="gender w-full">Omar</div>
+              </label>
+            </div>
+            <div class="genDiv w-3/12 text-center h-full border-2 border-wite rounded-tr-2xl cursor-pointer">
+              <input type="radio" id="maya" name="enfant" class="hidden" />
+              <label for="maya" class="w-full cursor-pointer">
+                <div class="gender w-full">Maya</div>
+              </label>
+            </div>
+          </div>
+          <div id=<%=eval.id %> class="mb-10 border-2 border-t-0 border-white rounded-b-2xl px-2 pt-4 pb-10">
+            <div id=<%=eval.classNote%> data-="oldNote">
+              <% const selected = eval.classNote  %>
+              <label for="" class="font-semibold">Class :</label>
+              <div class="flex-wrap gap-3 sm:flex">
+                <div class="">
+                  <input type="radio" id="lecture" name="class" <%=selected === "lecture"? "checked": "" %> />
+                  <label for="lecture">Lecture</label>
+                </div>
+                <div class="">
+                  <input type="radio" id="ecriture" name="class" <%=selected === "ecriture"? "checked": "" %> />
+                  <label for="ecriture">Ecriture</label>
+                </div>
+                <div class="">
+                  <input type="radio" id="hifd" name="class" <%=selected === "hifd"? "checked": "" %> />
+                  <label for="hifd">Hifd</label>
+                </div>
+                <div class="">
+                  <input type="radio" id="rangement" name="class" <%=selected === "rangement"? "checked": "" %> />
+                  <label for="rangement">Rangement</label>
+                </div>
+                <div class="">
+                  <input type="radio" id="comportement" name="class" <%=selected === "comportement"? "checked": "" %> />
+                  <label for="comportement">Comportement</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="my-4 grid grid-cols-6">
+              <div class="col-span-2">
+                <label for="" class="font-semibold">Note :</label>
+              </div>
+              <div class="col-span-4 flex">
+                <div class="w-5/6">
+                  <input type="range" id="noteBar" class="note-range w-full" min="0" max="10" value=<%=eval.note%> />
+                </div>
+                <div class="text-center w-1/6">
+                  <span id="noteSpan" class="note-span text-right text-xl text-red-600"><%=eval.note%> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="my-4 ">
+              <label for="" class="">Descreption</label>
+              <input type="text" name="" id="description" class="w-5/6 bg-transparent border-b-2 border-white block focus:outline-none" maxlength="35" value=<%=eval.description%> />
+            </div>
+          </div>
+        </div>
+        <div class="my-3 flex justify-end">
+          <input type="submit" class="w-3/12 py-1 bg-white text-black font-semibold rounded-sm select-none cursor-pointer" value="Envoyer" />
+        </div>
+      </form>
+      <div id="errDiv" class="my-4  w-full  flex-col justify-center items-center font-mono hidden">
+        <h3 class="text-red-600 text-xl ">Erreur lors de l'enregistrement de la note</h3>
+        <a href="" class="text-blue-800">Ressayer</a>
+      </div>
+    </div>
+  </div>
+  <footer class="wrapper fixed bottom-0 left-0 z-40 h-10 px-6 w-full flex justify-between items-center text-white font-semibold">
+    <a href="/">Retour</a>
+    <a href="/addNote" class="w-8 h-8 pb-1 border-2 border-white rounded-md flex justify-center items-center text-2xl"><span>+</span></a>
+    <a href="/logout">Logout</a>
+  </footer>
+  <script src="/js/commun.js"></script>
+  <script src="/js/modifEval.js"></script>
+</body>
+
+</html>

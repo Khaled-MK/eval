@@ -1,0 +1,55 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+
+      <link rel="stylesheet" href="./css/master.css" />
+   </head>
+   <body class="fond-img overflow-hidden">
+      <button class="mx-2 my-2 bg-gradient-to-r from-blue-800 to-pink-400 rounded-full px-6 text-white font-semibold">
+         <a href="/"> Retour </a>
+      </button>
+
+      <div id="mainDiv" class="w-full h-full flex justify-center items-center">
+         <div class="w-[95%] max-w-lg rounded-xl shadow-xl bg-white px-4 py-4 gap-x-2 gap-y-4">
+            <h3 class="my-3 text-2xl font-bold select-none w-full">Connectez-vous</h3>
+            <form id="loginForm">
+               <div class="w-full my-4">
+                  <input id="userName" type="text" name="userName" placeholder="Utilisateur" class="w-full rounded-md border-2 bg-emerald-50 px-2 py-1" />
+                  <p id="userErr" class="smallTx text-red-600 px-2">L'utilisateur n'existe pas</p>
+               </div>
+
+               <div class="w-full my-4">
+                  <div id="mdpDiv" class="w-full rounded-md border-2 bg-emerald-50 px-2 py-1 flex items-center outline outline-2 outline-gray-950">
+                     <input id="mdp" type="password" name="mdp" placeholder="Mot de passe" class="bg-emerald-50 w-11/12 focus:outline-none" />
+                     <span id="showMdp" class="w-1/12 off cursor-pointer select-none">
+                        <img id="eye" src="./imgs/showMdpOff.svg" class="h-3" alt="voir Mot de passe" />
+                     </span>
+                  </div>
+                  <p id="mdpErr" class="smallTx text-red-600 px-2">Mot de passe erroné</p>
+               </div>
+
+               <div class="w-full flex flex-col justify-center items-center">
+                  <input id="submit" type="submit" value="Login" class="block mx-auto my-2 px-8 py-1 bg-gradient-to-r from-blue-800 to-pink-400 rounded-full text-white font-semibold cursor-pointer select-none" />
+                  <!-- <a href="/signUp" class="mx-auto text-blbg-blue-800 text-sm">Créer un compte</a> -->
+                  <a href="/reMdp" class="mx-auto text-blue-800 text-sm">Mot de passe oublié</a>
+               </div>
+            </form>
+         </div>
+      </div>
+      <div class="border-red-600"></div>
+
+      <footer class="fixed bottom-0 left-0 z-40 h-10 px-6 w-full bg-gradient-to-l from-blue-800 to-pink-400 flex justify-between items-center text-white font-semibold">
+         <!-- <a href="#">Modifier</a>
+         <a href="#" class="w-8 h-8 pb-1 border-2 border-white rounded-md flex justify-center items-center text-2xl"><span>+</span></a>
+         <a href="#">Compte</a> -->
+      </footer>
+      >
+      <script src="./js/login.js"></script>
+      <!-- <script src="./js/checkEmail.js"></script> -->
+   </body>
+</html>
